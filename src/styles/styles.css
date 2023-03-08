@@ -1,0 +1,370 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Code+Pro:ital,wght@0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap');
+
+
+html {
+    font-family: "Source Code Pro", monospace;
+}
+
+a {
+    color: inherit;
+    text-decoration: none;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+body {
+    height: 100vh;
+    
+}
+
+.layout {
+    display: flex;
+    min-height: 100vh;
+    flex-direction: column;
+
+}
+.layout nav h1:hover {
+    color: purple;
+    cursor: pointer;
+}
+
+.layout nav {
+    background-color: rgb(0,0,0,.05);
+    display: flex;
+    padding: 10px 120px;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.layout nav .right {
+    display: flex;
+    gap: 20px;
+    align-items: center;
+    cursor: pointer;
+
+}
+
+.layout nav .right span {
+    text-decoration: underline;
+}
+
+.layout nav .right span:hover {
+    text-decoration: none;
+    color: purple;
+}
+
+.layout main {
+    flex: 1;
+}
+
+.layout footer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    height: 72px;
+    background-color: rgb(0,0,0,.05);
+}
+
+
+footer a, footer span{
+    display: flex;
+    gap: 10px;
+    align-items: center;
+    transition: 200ms all;
+}
+
+footer a:hover {
+    text-decoration: underline;
+    color: purple;
+    margin-left: 8px;
+    fill: purple;
+    transform: scale(1.1);
+
+}
+main {
+    padding-bottom: 15px;
+}
+main .posts {
+    padding: 40px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+main .posts > h1 {
+    margin-bottom: 15px;
+}
+main .posts button {
+    margin-top: 15px;
+    display: flex;
+    align-items: center;
+    gap: 5px;
+    opacity: .8;
+    padding: 10px 15px;
+    border-radius: 9999px;
+    background-color: lightgreen;
+    border: 2px green solid;
+    color: darkgreen;
+    cursor: pointer;
+    font-size: 24px;
+    font-weight: 500;
+    font-family: 'Source Code Pro';
+    transition: 200ms all;
+}
+
+main .posts button:hover {
+    opacity: 1;
+}
+main .postList {
+    border: rgb(0,0,0,.1) solid 2px;
+    padding: 30px;
+    height: 50vh;
+    max-width: 60vw;
+    overflow-x: hidden;
+    text-overflow: ellipsis;
+    overflow-y: scroll;
+}
+
+main .postList a {
+    text-decoration: underline;
+}
+
+
+main .postList a:visited {
+    color: purple;
+}
+
+
+
+.post, .createPost, .loginPage, .registerPage {
+    width: 60vw;
+    margin: 50PX auto 0;
+}
+.createPost form{
+    display: flex;
+    flex-direction: column;
+}  
+
+.createPost input, .createPost textarea {
+    height: 18px;
+    font-size: 16px;
+    padding: 2px;
+    
+    font-family: "Source Code Pro";
+    resize: vertical;
+}
+
+.createPost #content {
+    height: auto;
+    min-height: 200px;
+}
+
+.createPost button {
+    margin-top: 10px;
+    border: 2px green solid;
+    align-self: center;
+    background-color: white;
+    color: green;
+}
+
+.createPost button:hover {
+    color: white;
+    background-color: green;
+}
+
+
+.post h1 {
+    padding: 2px;
+    border-bottom: 2px solid rgb(0,0,0,.1);
+}
+
+.post .author {
+    font-size: 20px;
+    font-weight: 600;
+    font-style: italic;
+}
+
+
+.post .body {
+    margin-top: 10px;
+    font-size: 20px;
+    padding: 15px 0;
+    text-indent: 40px;
+    border-bottom: 2px solid rgb(0,0,0,.1);
+}
+
+.createComment form {
+    display: flex;
+    flex-direction: column;
+}
+
+
+.addComment, .cancelComment, .createComment form button, .createPost button {
+    font-family: "Source Code Pro", monospace;
+    font-weight: 500;
+    font-size: 18px;
+    border-radius: 9999px;
+    padding: 10px 15px;
+    transition: 200ms all;
+    cursor: pointer;
+}
+.addComment {
+    margin: 10px 0 0 0;
+    display: flex;
+    gap: 4px;
+    align-items: center;
+    align-self: flex-end;
+    border: 2px green solid;
+    background-color: white;
+    color: green;
+}
+.addComment:hover {
+    background-color: green;
+    color: white;
+}
+.cancelComment {
+    display: flex;
+    gap: 4px;
+    align-self: flex-end;
+    border: 2px red solid;
+    cursor: pointer;
+    background-color: white;
+    color: red;
+}
+
+.cancelComment:hover {
+    background-color: red;
+    color: white
+}
+.createComment form button {
+    margin-top: 4px;
+    align-self: flex-end;
+    border: 2px blue solid;
+    cursor: pointer;
+    background-color: white;
+    color: blue;
+}
+
+.createComment form button:hover {
+    color: white;
+    background-color: blue;
+}
+
+.createComment p {
+    color: red;
+    font-weight: 500;
+}
+.createComment textarea{
+    width: 100%;
+    border:none;
+    font-size: 16px;
+    height: 18px;
+    outline: none;
+    resize: vertical;
+    border-bottom: 2px black solid;
+    padding:  0 8px ;
+
+}
+.comment {
+    padding-left: 15px;
+    margin: 15px 0;
+}
+.commentBody {
+    width: 60%;
+    
+}
+.updateComment {
+    width: 60%;
+    display: flex;
+    flex-direction: column;
+   
+}
+
+.updateComment input {
+    padding: 2px;
+    font-family: "Source Code Pro", monospace;
+    font-size: 16px;
+    
+    display: flex;
+    
+}
+.updateComment button {
+    align-self: flex-end;
+}
+
+.loginPage form, .registerPage form{
+    background-color: rgb(0,0,0,.05);
+    padding: 20px;
+    
+}
+
+
+
+.loginPage form .inputs, .registerPage form .inputs {
+    display: flex;
+    justify-content: space-between;
+    margin: 0 auto;
+    align-items: center;
+    width: 80%;
+
+}
+
+.loginPage form button, .registerPage form button {
+    width: 30%;
+    margin: 15px auto 0;
+    display: block;
+    font-family: "Source Code Pro", monospace;
+    font-size: 18px;
+    cursor: pointer;
+    font-weight: 600;
+    color: darkgreen;
+    border-radius: 9999px;
+    background-color: #90EE90;
+    border: 2px darkgreen solid;
+    padding: 15px;
+    opacity: .8;
+}
+
+
+.loginPage form button:hover {
+    opacity: 1;
+}
+.loginPage form .inputs label, .registerPage form .inputs label {
+    font-size: 14px;
+}
+.loginPage form .inputs input, .registerPage form .inputs input {
+    padding: 8px;
+    font-family: "Source Code Pro", monospace;
+    width: 300px;
+
+}
+
+.loginPage .registerNow {
+    display: flex;
+    text-align: center;
+    margin: 0 auto;
+    color: blue;
+    flex-direction: column;
+    width: 30%;
+    margin-top: 40px;
+    align-items: center;
+}
+
+.loginPage .registerNow button {
+    background-color: lightblue;
+    border-color: blue;
+
+    color: blue;
+    width: 100%;
+    margin-top: 8px;
+}
+
+.loginPage form .formSection, .registerPage form .formSection {
+     
+    display: flex;
+    flex-direction: column;
+
+}
