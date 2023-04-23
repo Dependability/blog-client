@@ -21,7 +21,7 @@ const Posts = ({posts}) => {
             <div className='postList'>
             {
             posts.map((post, i) => {
-                return <h1 key={i}><Link href={'/posts/' + post._id}>Title: {post.title}</Link></h1>
+                return <h1 key={i}><Link to={'/posts/' + post._id}>Title: {post.title}</Link></h1>
             })
     }
             </div>
