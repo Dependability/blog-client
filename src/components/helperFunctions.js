@@ -27,7 +27,7 @@ async function easyFetch(path, method='GET', payload={}, headers=null) {
 
     }
     initValue.headers = newHeader;
-    const request = await fetch(`http://localhost:8000/api${path}`, initValue);
+    const request = await fetch(`https://lit-reef-26994.herokuapp.com/api${path}`, initValue);
     const data = await request.json();
     return data;
 }

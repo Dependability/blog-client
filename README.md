@@ -1,4 +1,10 @@
-# Getting Started with Create React App
+# Blog Client
+
+This is the client side for the [Blog Api](https://github.com/Dependability/blog-api)
+
+👉 [LIVE DEMO](https://dependability.github.io/blog-client)
+
+## Getting Started with Create React App
 
 This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
 

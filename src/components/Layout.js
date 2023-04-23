@@ -4,10 +4,10 @@ export default function Layout({children}) {
     return <div className='layout'>
         <nav>
             <div className='left'>
-                <h1><a href={'/'}>Blog Client</a></h1>
+                <h1><a href={process.env.PUBLIC_URL+'/'}>Blog Client</a></h1>
             </div>
             <div className='right'>
-                <span><a href='/posts/create'>New Post</a></span>
+                <span><a href={process.env.PUBLIC_URL +'/posts/create'}>New Post</a></span>
                 {user ? <span onClick={()=> {localStorage.clear(); setUser(false);}}>Sign Out</span> : <span><a href='/login'>Sign In</a></span>}
             </div>
         </nav>
