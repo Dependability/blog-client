@@ -1,8 +1,7 @@
 import React from 'react';
-import { useNavigate } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 import Layout from './Layout';
 import { easyFetch } from './helperFunctions';
-
 import Icon from '@mdi/react';
 import { mdiPlus } from '@mdi/js';
 
@@ -22,7 +21,7 @@ const Posts = ({posts}) => {
             <div className='postList'>
             {
             posts.map((post, i) => {
-                return <h1 key={i}><a href={process.env.PUBLIC_URL + '/posts/' + post._id}>Title: {post.title}</a></h1>
+                return <h1 key={i}><Link href={'/posts/' + post._id}>Title: {post.title}</Link></h1>
             })
     }
             </div>

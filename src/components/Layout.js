@@ -1,14 +1,15 @@
 import {useState} from 'react';
+import { Link } from 'react-router-dom';
 export default function Layout({children}) {
     const [user, setUser] = useState(localStorage.getItem('User') ? true : false);
     return <div className='layout'>
         <nav>
             <div className='left'>
-                <h1><a href={process.env.PUBLIC_URL+'/'}>Blog Client</a></h1>
+                <h1><Link to={'/'}>Blog Client</Link></h1>
             </div>
             <div className='right'>
-                <span><a href={process.env.PUBLIC_URL +'/posts/create'}>New Post</a></span>
-                {user ? <span onClick={()=> {localStorage.clear(); setUser(false);}}>Sign Out</span> : <span><a href='/login'>Sign In</a></span>}
+                <span><Link to={'posts/create'}>New Post</Link></span>
+                {user ? <span onClick={()=> {localStorage.clear(); setUser(false);}}>Sign Out</span> : <span><Link to={'/login'}>Sign In</Link></span>}
             </div>
         </nav>
         <main>
