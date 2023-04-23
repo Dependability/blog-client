@@ -11,7 +11,7 @@ function App() {
   const [posts, setPost] = useState([])
 
   useEffect(()=> {
-    fetch('http://localhost:8000/api/posts')
+    fetch('lit-reef-26994.herokuapp.com/api/posts')
     .then(response => {
       return response.json()
     })
@@ -23,7 +23,7 @@ function App() {
 
   }, [])
 
-  return <BrowserRouter>
+  return <BrowserRouter basename='blog-client'>
     {/* <button onClick={()=> {
       localStorage.clear()
     }}>Sign out</button> */}
