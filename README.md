@@ -2,7 +2,7 @@
 
 This is the client side for the [Blog Api](https://github.com/Dependability/blog-api)
 
-👉 [LIVE DEMO](https://dependability.github.io/blog-client)
+👉 [LIVE DEMO](https://dependability.github.io/blog-client/)
 
 ## Getting Started with Create React App
 
