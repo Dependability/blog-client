@@ -27,7 +27,7 @@ async function easyFetch(path, method='GET', payload={}, headers=null) {
 
     }
     initValue.headers = newHeader;
-    const request = await fetch(`https://lit-reef-26994.herokuapp.com/api${path}`, initValue);
+    const request = await fetch(`https://blog-api-production-ca8b.up.railway.app/api${path}`, initValue);
     const data = await request.json();
     return data;
 }

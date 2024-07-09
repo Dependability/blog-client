@@ -11,7 +11,7 @@ function App() {
   const [posts, setPost] = useState([])
 
   useEffect(()=> {
-    fetch('https://lit-reef-26994.herokuapp.com/api/posts')
+    fetch('https://blog-api-production-ca8b.up.railway.app/api/posts')
     .then(response => {
       return response.json()
     })
