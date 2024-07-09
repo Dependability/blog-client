@@ -8,7 +8,7 @@ export default function Layout({children}) {
                 <h1><Link to={'/'}>Blog Client</Link></h1>
             </div>
             <div className='right'>
-                <span><Link to={'posts/create'}>New Post</Link></span>
+                <span><Link to={'/posts/create'}>New Post</Link></span>
                 {user ? <span onClick={()=> {localStorage.clear(); setUser(false);}}>Sign Out</span> : <span><Link to={'/login'}>Sign In</Link></span>}
             </div>
         </nav>
